@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "./static/css/main.c1d5dd6b.css",
+    "main.js": "./static/js/main.7f4805cb.js",
+    "static/media/Donal trump.png": "./static/media/Donal trump.646d1b050f2394cfb379.png",
+    "static/media/Thomas Matthew Crooks.png": "./static/media/Thomas Matthew Crooks.94f9fe7c56296e944ecc.png",
+    "static/media/Rally attenders.png": "./static/media/Rally attenders.09ad683aa8b822d6f6c4.png",
+    "static/media/Kimberly Cheatle.png": "./static/media/Kimberly Cheatle.09503d085f03bbdad657.png",
+    "static/media/Secret service.png": "./static/media/Secret service.dac8be5f7c9045ab9e2b.png",
+    "static/media/Local Police.png": "./static/media/Local Police.5a558ce5c7b26a4237d0.png",
+    "static/media/Corey Comperatore.png": "./static/media/Corey Comperatore.e88a1c1592fd1f5c2a56.png",
+    "index.html": "./index.html"
+  },
+  "entrypoints": [
+    "static/css/main.c1d5dd6b.css",
+    "static/js/main.7f4805cb.js"
+  ]
+}

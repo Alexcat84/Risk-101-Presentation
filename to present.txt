@@ -1,0 +1,6 @@
+to present:
+
+npm run build
+
+serve -s build
+
