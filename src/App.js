@@ -52,12 +52,12 @@ const navigationSequence = [
   'thankYou'
 ];
 
-// Definimos los nodos iniciales
+// Definir las posiciones iniciales de los nodos
 const initialNodes = [
   {
     id: 'titleSlide',
     type: 'titleSlideNode',
-    position: { x: 0, y: 0 },
+    position: { x: 100, y: 100 },
     data: {
       title: 'The Attempted Assassination of President Trump',
       subtitle: 'A Risk Management Analysis',
@@ -68,246 +68,68 @@ const initialNodes = [
   {
     id: 'eventOverview',
     type: 'eventOverviewNode',
-    position: { x: 0, y: 150 },
+    position: { x: 100, y: 800 },
     data: {
       date: 'July 13, 2024',
-      location: 'Butler, Pennsylvania',
-      incidentDetails: [
-        'Shooter Thomas Matthew Crooks fired from an elevated position (~400 feet away)',
-        'Trump suffered minor ear injury but was otherwise unharmed',
-        'One spectator killed, two others critically injured',
-        'Secret Service neutralized the shooter'
-      ],
-      sourceInfo: 'FBI investigation, Secret Service statements, media reports'
-    },
-    hidden: true
+      location: 'Butler, Pennsylvania'
+    }
   },
   {
     id: 'stakeholders',
     type: 'stakeholdersNode',
-    position: { x: 0, y: 300 },
-    data: {
-      stakeholders: [
-        { name: 'Donald Trump', role: 'Target', description: 'Former President and target of the attack' },
-        { name: 'Secret Service', role: 'Risk Technical Team', description: 'Responsible for protection of former presidents' },
-        { name: 'Kimberly Cheatle', role: 'Risk Owner', description: 'Director of Secret Service at time of incident' },
-        { name: 'Local Police', role: 'Risk Responders', description: 'Responsible for general event security' },
-        { name: 'Thomas Matthew Crooks', role: 'Risk Source', description: '20-year-old with AR-style rifle' },
-        { name: 'Rally Attendees', role: 'Affected Parties', description: 'Civilians exposed to security risks' },
-        { name: 'Corey Comperatore', role: 'Casualty', description: '50-year-old spectator who died protecting his family' }
-      ]
-    },
-    hidden: true
+    position: { x: 100, y: 1500 },
+    data: {}
   },
   {
     id: 'riskIdentification',
     type: 'riskIdentificationNode',
-    position: { x: 0, y: 450 },
-    data: {
-      riskCategories: {
-        security: [
-          'There is a significant chance that elevated positions outside the security perimeter could provide access for potential assailants',
-          'There is a possibility that interagency communication failures could prevent timely response to identified threats',
-          'There exists a probability that the standard security perimeter for outdoor rallies is insufficient'
-        ],
-        political: [
-          'There is a likelihood that the assassination attempt could intensify political polarization',
-          'There is a chance that the incident could lead to a surge in threats against other political figures'
-        ],
-        public: [
-          'There is a probability that large outdoor political gatherings could result in casualties if attacked',
-          'There is a risk that emergency response capabilities may be inadequate for mass casualty events'
-        ],
-        reputational: [
-          'There is a high likelihood that public trust in the Secret Service could be severely damaged',
-          'There is a probability that security protocols for political events will face intense scrutiny'
-        ]
-      }
-    },
-    hidden: true
+    position: { x: 1100, y: 100 },
+    data: {}
   },
   {
     id: 'riskAnalysis',
     type: 'riskAnalysisNode',
-    position: { x: 0, y: 600 },
-    data: {
-      riskMatrix: [
-        { risk: 'Perimeter Security Failure', probability: 'High', impact: 'Catastrophic', severity: 'High' },
-        { risk: 'Interagency Communication Breakdown', probability: 'High', impact: 'High', severity: 'High' },
-        { risk: 'Public Panic', probability: 'High', impact: 'Moderate', severity: 'Medium' },
-        { risk: 'Detection of Suspicious Person', probability: 'Medium', impact: 'Catastrophic', severity: 'High' },
-        { risk: 'Inadequate Emergency Response', probability: 'Medium', impact: 'High', severity: 'Medium' }
-      ],
-      rootCauses: [
-        'Insufficient security protocols for areas outside immediate perimeter',
-        'Delayed response to reported suspicious person',
-        'Inadequate coordination between federal and local law enforcement',
-        'Lack of aerial surveillance or counter-sniper positioning'
-      ]
-    },
-    hidden: true
+    position: { x: 1100, y: 800 },
+    data: {}
   },
   {
     id: 'riskResponse',
     type: 'riskResponseNode',
-    position: { x: 0, y: 750 },
-    data: {
-      strategies: [
-        {
-          title: 'Perimeter Security Enhancement',
-          description: 'Strengthen the security perimeter to prevent unauthorized access from elevated positions.',
-          actions: [
-            'Extended security zones beyond immediate rally area',
-            'Pre-event security sweeps of all elevated positions with line of sight'
-          ]
-        },
-        {
-          title: 'Threat Detection Improvement',
-          description: 'Implement advanced surveillance systems to identify potential threats earlier.',
-          actions: [
-            'Enhanced drone surveillance systems',
-            'Deployment of counter-sniper teams at all outdoor events'
-          ]
-        },
-        {
-          title: 'Interagency Coordination',
-          description: 'Strengthen communication and coordination between all security agencies involved.',
-          actions: [
-            'Standardized communication protocols between agencies',
-            'Joint training exercises for multi-agency security operations'
-          ]
-        },
-        {
-          title: 'Response Protocols',
-          description: 'Develop and implement faster and more effective response procedures.',
-          actions: [
-            'Rapid response teams for suspicious activity reports',
-            'Clear evacuation procedures for VIPs and attendees'
-          ]
-        }
-      ]
-    },
-    hidden: true
+    position: { x: 1100, y: 1500 },
+    data: {}
   },
   {
     id: 'lessonsLearned',
     type: 'lessonsLearnedNode',
-    position: { x: 0, y: 900 },
-    data: {
-      failures: [
-        'Perimeter security was inadequate, focusing only on immediate rally area',
-        'Reports of suspicious person were not acted upon quickly enough',
-        'Interagency coordination was insufficient',
-        'Threat assessment failed to identify vulnerable elevated positions'
-      ],
-      successes: [
-        'Secret Service rapid response after shots were fired',
-        'Medical response saved lives',
-        'Evacuation protocols were executed effectively',
-        'Security perimeter prevented further casualties'
-      ]
-    },
-    hidden: true
+    position: { x: 2100, y: 100 },
+    data: {}
   },
   {
     id: 'recommendations',
     type: 'recommendationsNode',
-    position: { x: 0, y: 1050 },
-    data: {
-      recommendations: [
-        {
-          category: 'Technology',
-          title: 'Deploy Holistic Drone Surveillance',
-          description: 'Implement 360° monitoring of all areas with line of sight to protected individuals.',
-          details: 'Modern drone technology with AI-powered threat detection can identify potential threats in real-time, allowing for faster response times and more exhaustive coverage than traditional security methods.'
-        },
-        {
-          category: 'Policy',
-          title: 'Mandatory Security Sweeps',
-          description: 'Implement mandatory pre-event security sweeps of all buildings within firing range of event location.',
-          details: 'Security teams should methodically search and secure all buildings, structures, and elevated positions within potential firing range of the event site. This includes rooftops, upper floors of buildings, and any vantage points that could be exploited by assailants.'
-        },
-        {
-          category: 'Training',
-          title: 'Interagency Crisis Simulations',
-          description: 'Conduct monthly joint training exercises between all security stakeholders.',
-          details: 'Regular cross-agency simulations should recreate various threat scenarios, testing communication channels, response times, and coordination procedures. These exercises should be followed by thorough after-action reviews and implementation of identified improvements.'
-        },
-        {
-          category: 'Communication',
-          title: 'Unified Command Structure',
-          description: 'Establish direct communication channels between all security stakeholders.',
-          details: 'A centralized command center with representatives from all security agencies should be established for high-profile events, with clear lines of authority and communication protocols defined well in advance.'
-        },
-        {
-          category: 'Resources',
-          title: 'Increased Funding for Protective Details',
-          description: 'Allocate additional resources for advanced security technology and personnel.',
-          details: 'Protective services require adequate funding to acquire state-of-the-art security technology, hire and train specialized personnel, and implement meticulous security measures for high-risk political events.'
-        }
-      ]
-    },
-    hidden: true
+    position: { x: 2100, y: 800 },
+    data: {}
   },
   {
     id: 'conclusion',
     type: 'conclusionNode',
-    position: { x: 0, y: 1200 },
-    data: {
-      conclusions: [
-        'The attempted assassination exposed critical security gaps but also demonstrated effective crisis response',
-        'Political events require all-encompassing risk management beyond the immediate security perimeter',
-        'Interagency coordination is essential for effective security operations',
-        'Proactive risk identification and mitigation is vital for protecting public figures',
-        'Security protocols must continually evolve to address changing threat landscapes'
-      ]
-    },
-    hidden: true
+    position: { x: 2100, y: 1500 },
+    data: {}
   },
   {
     id: 'references',
     type: 'referencesNode',
-    position: { x: 0, y: 1350 },
-    data: {
-      references: [
-        {
-          category: 'Official Sources',
-          items: [
-            'FBI statements and investigation reports',
-            'Secret Service statements and protocols',
-            'Department of Homeland Security after-action reports'
-          ]
-        },
-        {
-          category: 'Media Coverage',
-          items: [
-            'CNN multifaceted coverage of the July 13 incident',
-            'Reuters investigative reporting on security protocols',
-            'BBC analysis of the political impact',
-            'Associated Press (AP) timeline of events'
-          ]
-        },
-        {
-          category: 'Expert Analysis',
-          items: [
-            'Security expert evaluations of protective measures',
-            'Risk management framework assessments',
-            'Political security protocols review'
-          ]
-        }
-      ]
-    },
-    hidden: true
+    position: { x: 3100, y: 700 },
+    data: {}
   },
   {
     id: 'thankYou',
     type: 'thankYouNode',
-    position: { x: 0, y: 1500 },
+    position: { x: 3100, y: 1300 },
     data: {
       title: 'Thank You!',
       message: 'Questions or comments?'
-    },
-    hidden: true
+    }
   }
 ];
 
@@ -333,15 +155,19 @@ const loadSavedNodePositions = () => {
       const positions = JSON.parse(savedPositions);
       return initialNodes.map(node => {
         if (positions[node.id]) {
-          return { ...node, position: positions[node.id] };
+          // Usar posiciones guardadas pero asegurarse de que los nodos estén visibles
+          return { ...node, position: positions[node.id], hidden: false };
         }
-        return node;
+        // Asegurar que los nodos predeterminados también estén visibles
+        return { ...node, hidden: false };
       });
     }
   } catch (error) {
-    console.error('Error cargando posiciones guardadas:', error);
+    console.error('Error al cargar posiciones guardadas:', error);
   }
-  return initialNodes;
+  
+  // Si no hay posiciones guardadas o hay un error, usar las posiciones predefinidas y asegurar visibilidad
+  return initialNodes.map(node => ({ ...node, hidden: false }));
 };
 
 function NavigationControls({ onNext, onPrevious, currentNodeIndex, totalNodes }) {
@@ -448,15 +274,19 @@ function Flow() {
 
   // Función para guardar las posiciones actuales de los nodos
   const saveNodePositions = useCallback(() => {
+    // Desactivar la función para evitar que cada visitante modifique las posiciones
+    // Código original comentado:
+    /*
     const positions = {};
     nodes.forEach(node => {
       positions[node.id] = { ...node.position };
     });
     setSavedPositions(positions);
     localStorage.setItem('nodePositions', JSON.stringify(positions));
+    */
     
-    // Mostrar notificación
-    alert('¡Posiciones de nodos guardadas correctamente!');
+    // No hacer nada, para conservar las posiciones definidas
+    console.log("Función de guardado desactivada para mantener posiciones consistentes");
   }, [nodes]);
 
   // Función para restaurar las posiciones guardadas
